@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News at your hand!!!</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <nav>
+        <div class="mainnav container flex">
+            <a href="#" class="company-logo" onclick="reload()">
+                <img class="logo" onclick="reload()" src="logo.png" alt="company logo" draggable="false">
+            </a>
+            <div class="Navlinks">
+                <ul class="flex">
+                    <li class="navitem link" id="Sports" onclick="onNavItemClick('Sports')">Sports</li>
+                    <li class="navitem link" id="Health" onclick="onNavItemClick('Health')">Health</li>
+                    <li class="navitem link" id="Finance" onclick="onNavItemClick('Finance')">Finance</li>
+                </ul>
+            </div>
+            <div class="search-bar flex">
+                <input id="text" type="text" class="news-input" placeholder="Your fav topic..">
+                <button id="search-button" class="search-butt">search</button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="cards-container container flex" id="cards-container">
+        </div>
+    </main>
+    <template id="template-news-card" >
+        <div class="card">
+            <div class="card-header">
+                <img src="https://media.istockphoto.com/id/1366866304/photo/moon.jpg?s=612x612&w=is&k=20&c=i5T30q3FrIJ382f_OuZXiKebamzhdIJI3d0YU0HeSiM=" alt="newsimg" id="newsimg" >
+            </div>
+            <div class="card-content">
+                <h3 id="newstitle">this is title</h3>
+                <h6 class="news-source" id="news-source">end gadget dd/mm/yyyy</h6>
+                <p class="news-desc" id="news-desc">norm 20</p>
+            </div>
+        </div>
+    </template>
+    <script src="index.js"></script>
+</body>
+</html>
